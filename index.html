@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/* container */
-.padded-boxes {
-    display:flex;
-    flex-wrap:wrap;
-    gap:2rem;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* boxes */
-.padded-boxes > * {
-    width:100%;
-    background:#eee;
-    border-radius:.4rem;
-}
+    <title>EasyPark - Employee Beta</title>
+    <script>
+        let d = new Date();
+        alert("Today's date is " + d);
 
-/* headings */
-.padded-boxes .heading {
-    background:#f97171;
-    margin:0;
-    padding:1rem;
-    border-top-left-radius:.4rem;
-    border-top-right-radius:.4rem;
-}
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
 
-/* padded content */
-.padded-boxes .padded {
-    padding:.1rem 1rem;
-}
+    </script>
 
-/* tablet breakpoint */
-@media (min-width:768px) {
-    .padded-boxes > * {
-        width:calc((100% - 4rem) / 3);
-    }
-}
+    <style>
+        /* container */
+        .padded-boxes {
+            display:flex;
+            flex-wrap:wrap;
+            gap:2rem;
+        }
 
-.btn { 
-    text-decoration: none; 
-    border: none; 
-    padding: 12px 40px; 
-    font-size: 16px; 
-    background-color: green; 
-    color: #fff; 
-    border-radius: 5px; 
-    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
-    cursor: pointer; 
-    outline: none; 
-    transition: 0.2s all; 
-} 
-/* Adding transformation when the button is active */ 
-  
-.btn:active { 
-    transform: scale(0.98); 
-    /* Scaling button to 0.98 to its original size */ 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-    /* Lowering the shadow */ 
-} 
+        /* boxes */
+        .padded-boxes > * {
+            width:100%;
+            background:#eee;
+            border-radius:.4rem;
+        }
 
-</style>
-</head>
+        /* headings */
+        .padded-boxes .heading {
+            background:#f97171;
+            margin:0;
+            padding:1rem;
+            border-top-left-radius:.4rem;
+            border-top-right-radius:.4rem;
+        }
+
+        /* padded content */
+        .padded-boxes .padded {
+            padding:.1rem 1rem;
+        }
+
+        .btn { 
+            text-decoration: none; 
+            border: none; 
+            padding: 12px 40px; 
+            font-size: 16px; 
+            background-color: green; 
+            color: #fff; 
+            border-radius: 5px; 
+            box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
+            cursor: pointer; 
+            outline: none; 
+            transition: 0.2s all; 
+        } 
+
+        /* Adding transformation when the button is active */   
+        .btn:active { 
+            transform: scale(0.98); 
+            /* Scaling button to 0.98 to its original size */ 
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+            /* Lowering the shadow */ 
+        } 
+    </style>
+    </head>
+
     <body>
 
     <div class="padded-boxes">
@@ -70,7 +82,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
                 <br>
                 <br>
-                <button class="btn">Button #1</button> 
+                <button class="btn" onclick="window.location.href = 'easypark://ft/wheel30-force-off?=true'">Force OFF the Wheel 3.0</button> 
                 <br>
                 <br>
             </div>
@@ -81,7 +93,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
                 <br>
                 <br>
-                <button class="btn">Button #2</button> 
+                <button class="btn" onclick="window.location.href = 'easypark://ft/wheel30-force-on?=true'">Force ON the Wheel 3.0</button> 
                 <br>
                 <br>
             </div>
@@ -97,6 +109,10 @@
                 <br>
             </div>
         </section>
+    </div>
+
+    <div id="myDIV">
+        This is my DIV element.
     </div>
 
     </body>
