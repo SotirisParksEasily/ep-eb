@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* container */
+.padded-boxes {
+    display:flex;
+    flex-wrap:wrap;
+    gap:2rem;
+}
+
+/* boxes */
+.padded-boxes > * {
+    width:100%;
+    background:#eee;
+    border-radius:.4rem;
+}
+
+/* headings */
+.padded-boxes .heading {
+    background:#f97171;
+    margin:0;
+    padding:1rem;
+    border-top-left-radius:.4rem;
+    border-top-right-radius:.4rem;
+}
+
+/* padded content */
+.padded-boxes .padded {
+    padding:.1rem 1rem;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .padded-boxes > * {
+        width:calc((100% - 4rem) / 3);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="padded-boxes">
+    <section>
+        <h3 class="heading">Heading 1</h3>
+        <div class="padded">
+            <!-- box 1 content -->
+        </div>
+    </section>
+    <section>
+        <h3 class="heading">Heading 2</h3>
+        <div class="padded">
+            <!-- box 2 content -->
+        </div>
+    </section>
+    <section>
+        <h3 class="heading">Heading 3</h3>
+        <div class="padded">
+            <!-- box 3 content -->
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
