@@ -56,6 +56,10 @@
             padding:.1rem 1rem;
         }
 
+        .center {
+          text-align: center
+        }
+
         .btn { 
             text-decoration: none; 
             border: none; 
@@ -159,8 +163,11 @@
             <div class="padded">
                 <p>Use the buttons below to enable or disable the forcefully switched off functionality of the new UI.</p>
                 <br>
-                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-off?=true';toggleHint()">Enable force OFF</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-off?=false';toggleHint()">Disable force OFF</button> 
+                <div class="center">
+                    <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-off?=true';toggleHint()">Enable force OFF</button>
+                    <br><br>
+                    <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-off?=false';toggleHint()">Disable force OFF</button> 
+                </div>
                 <br>
                 <br>
             </div>
@@ -171,8 +178,11 @@
             <div class="padded">
                 <p>Use the buttons below to enable or disable the forcefully switched on functionality of the new UI.</p>
                 <br>
-                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-on?=true'">Enable Force ON</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-on?=false'">Disable Force ON</button> 
+                <div class="center">
+                    <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-on?=true'">Enable Force ON</button>
+                    <br><br>
+                    <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-on?=false'">Disable Force ON</button> 
+                </div>
                 <br>
                 <br>
             </div>
