@@ -36,30 +36,69 @@
         width:calc((100% - 4rem) / 3);
     }
 }
+
+.btn { 
+    text-decoration: none; 
+    border: none; 
+    padding: 12px 40px; 
+    font-size: 16px; 
+    background-color: green; 
+    color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
+    cursor: pointer; 
+    outline: none; 
+    transition: 0.2s all; 
+} 
+/* Adding transformation when the button is active */ 
+  
+.btn:active { 
+    transform: scale(0.98); 
+    /* Scaling button to 0.98 to its original size */ 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    /* Lowering the shadow */ 
+} 
+
 </style>
 </head>
-<body>
+    <body>
 
-<div class="padded-boxes">
-    <section>
-        <h3 class="heading">Heading 1</h3>
-        <div class="padded">
-            <!-- box 1 content -->
-        </div>
-    </section>
-    <section>
-        <h3 class="heading">Heading 2</h3>
-        <div class="padded">
-            <!-- box 2 content -->
-        </div>
-    </section>
-    <section>
-        <h3 class="heading">Heading 3</h3>
-        <div class="padded">
-            <!-- box 3 content -->
-        </div>
-    </section>
-</div>
+    <div class="padded-boxes">
+        <section>
+            <h3 class="heading">Heading 1</h3>
+            <div class="padded">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
+                <br>
+                <br>
+                <button class="btn">Button #1</button> 
+                <br>
+                <br>
+            </div>
+        </section>
+        <section>
+            <h3 class="heading">Heading 2</h3>
+            <div class="padded">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
+                <br>
+                <br>
+                <button class="btn">Button #2</button> 
+                <br>
+                <br>
+            </div>
+        </section>
+        <section>
+            <h3 class="heading">Heading 3</h3>
+            <div class="padded">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
+                <br>
+                <br>
+                <button class="btn">Button #3</button> 
+                <br>
+                <br>
+            </div>
+        </section>
+    </div>
 
-</body>
+    </body>
 </html>
+
