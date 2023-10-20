@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>EasyPark - Employee Beta</title>
     <script>
-        let d = new Date();
-        alert("Today's date is " + d);
+        //let d = new Date();
+        //alert("Today's date is " + d);
 
-        function myFunction() {
-            var x = document.getElementById("myDIV");
+        function toggleHint() {
+            var x = document.getElementById("myDIV1");
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else {
@@ -21,6 +23,11 @@
     </script>
 
     <style>
+
+        body {
+            font-family: 'Inter';font-size: 22px;
+        }
+
         /* container */
         .padded-boxes {
             display:flex;
@@ -37,7 +44,7 @@
 
         /* headings */
         .padded-boxes .heading {
-            background:#f97171;
+            background:#ff51a2;
             margin:0;
             padding:1rem;
             border-top-left-radius:.4rem;
@@ -53,6 +60,7 @@
             text-decoration: none; 
             border: none; 
             padding: 12px 40px; 
+            width: 210px;
             font-size: 16px; 
             background-color: green; 
             color: #fff; 
@@ -69,51 +77,110 @@
             /* Scaling button to 0.98 to its original size */ 
             box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
             /* Lowering the shadow */ 
-        } 
+        }
+
+        /* CSS */
+        .button-19 {
+          appearance: button;
+          background-color: #6e2061;
+          border: solid transparent;
+          border-radius: 16px;
+          border-width: 0 0 4px;
+          box-sizing: border-box;
+          color: #FFFFFF;
+          width: 210px;
+          cursor: pointer;
+          display: inline-block;
+          font-family: din-round,sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: .8px;
+          line-height: 20px;
+          margin: 0;
+          outline: none;
+          overflow: visible;
+          padding: 13px 16px;
+          text-align: center;
+          text-transform: uppercase;
+          touch-action: manipulation;
+          transform: translateZ(0);
+          transition: filter .2s;
+          user-select: none;
+          -webkit-user-select: none;
+          vertical-align: middle;
+          white-space: nowrap;
+        }
+
+        .button-19:after {
+          background-clip: padding-box;
+          background-color: #872878;
+          border: solid transparent;
+          border-radius: 16px;
+          border-width: 0 0 4px;
+          bottom: -4px;
+          content: "";
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: -1;
+        }
+
+        .button-19:main,
+        .button-19:focus {
+          user-select: auto;
+        }
+
+        .button-19:hover:not(:disabled) {
+          filter: brightness(1.1);
+          -webkit-filter: brightness(1.1);
+        }
+
+        .button-19:disabled {
+          cursor: auto;
+        }
+
+        .button-19:active {
+          border-width: 4px 0 0;
+          background: none;
+        }
     </style>
     </head>
 
     <body>
 
     <div class="padded-boxes">
+        <div class="padded">
+            <h3>EasyPark - Employee Beta</h3>
+            <p>Please open this webpage at a mobile device that has the EasyPark Android app installed.</p>
+        </div>
         <section>
-            <h3 class="heading">Heading #1</h3>
+            <h3 class="heading">Force OFF the new Wheel 3.0</h3>
             <div class="padded">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
+                <p>Use the buttons below to enable or disable the forcefully switched off functionality of the new UI.</p>
+                <br>
+                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-off?=true';toggleHint()">Enable force OFF</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-off?=false';toggleHint()">Disable force OFF</button> 
                 <br>
                 <br>
-                <button class="btn" onclick="window.location.href = 'easypark://ft/wheel30-force-off?=true'">Force OFF the Wheel 3.0</button> 
+            </div>
+            <!-- <div id="myDIV1" style="display: none">This is my DIV element.</div> -->
+        </section>
+        <section>
+            <h3 class="heading">Force ON the new Wheel 3.0</h3>
+            <div class="padded">
+                <p>Use the buttons below to enable or disable the forcefully switched on functionality of the new UI.</p>
+                <br>
+                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-on?=true'">Enable Force ON</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <button class="button-19" onclick="window.location.href='easypark://ft/wheel30-force-on?=false'">Disable Force ON</button> 
                 <br>
                 <br>
             </div>
         </section>
-        <section>
-            <h3 class="heading">Heading #2</h3>
-            <div class="padded">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
-                <br>
-                <br>
-                <button class="btn" onclick="window.location.href = 'easypark://ft/wheel30-force-on?=true'">Force ON the Wheel 3.0</button> 
-                <br>
-                <br>
-            </div>
-        </section>
-        <section>
-            <h3 class="heading">Heading #3</h3>
-            <div class="padded">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis lectus vel metus pellentesque.
-                <br>
-                <br>
-                <button class="btn">Button #3</button> 
-                <br>
-                <br>
-            </div>
-        </section>
+        
     </div>
 
-    <div id="myDIV">
-        This is my DIV element.
-    </div>
+  
 
     </body>
 </html>
